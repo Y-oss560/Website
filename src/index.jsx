@@ -7,18 +7,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Button from '@material-ui/core/Button';
-import Container from '@material-ui/core/Container'
-import Header from "./components/header";
+import Header from "./components/Header";
+import Main from "./components/Main";
+
+
+class App extends React.Component {
+  render() {
+    return (
+      <div style={{ height: "100%" }}>
+        <Main header={<Header></Header>}></Main>
+      </div >
+    )
+  }
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Header></Header>
-    <div>Hello</div>
-    <Button variant="contained" color="primary">
-      你好，世界
-    </Button>
-
-  </React.StrictMode>,
+  <React.StrictMode >
+    <App></App>
+  </React.StrictMode >,
   document.getElementById('root')
 );
