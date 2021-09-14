@@ -15,8 +15,16 @@ class App extends React.Component {
   render() {
     return (
       <div style={{ height: "100%" }}>
-        <Main header={<Header></Header>}></Main>
-      </div >
+        <div style={{ height: "100%" }}>
+          <Main header={<Header></Header>}></Main>
+        </div >
+        <div className="page">
+          a00
+        </div>
+        <div className="page page-bg-gray">
+          bbb
+        </div>
+      </div>
     )
   }
 }
