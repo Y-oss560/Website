@@ -9,15 +9,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container'
+import Header from "./components/header";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Container maxWidth="lg">
-      <div>Hello</div>
-      <Button variant="contained" color="primary">
-        你好，世界
-      </Button>
-    </Container>
+    <Header></Header>
+    <div>Hello</div>
+    <Button variant="contained" color="primary">
+      你好，世界
+    </Button>
 
   </React.StrictMode>,
   document.getElementById('root')
