@@ -40,10 +40,9 @@ export default class Sponsor extends React.Component {
         this.moreSponsor = []
     }
 
-    async componentDidMount() {
-
+    componentDidMount() {
+        this.moreSponsor = window.sponsorList ? window.sponsorList() : [];
         this.selectDisplay(false)
-
     }
 
     selectDisplay(b) {
@@ -94,9 +93,9 @@ export default class Sponsor extends React.Component {
 
     render() {
         const sponsorElems = [];
-        this.sponsor.forEach(v => {
+        this.sponsor.forEach((v, index) => {
             sponsorElems.push(
-                <div style={{ width: "200px", height: "40px", display: "inline-block", overflow: "hidden", textAlign: "center" }}>
+                <div key={index} style={{ width: "200px", height: "40px", display: "inline-block", overflow: "hidden", textAlign: "center" }}>
                     <a href={v.url} target="_blank" rel="noreferrer">
                         <img src={'static/sponsor/' + v.img} alt={v.title} style={{ height: "100%" }} />
                     </a>
@@ -127,7 +126,7 @@ export default class Sponsor extends React.Component {
                     container
                     spacing={1}
                     direction="row"
-                    justify="center"
+                    justifyContent="center"
                     alignItems="center"
                     alignContent="center"
                     style={{ marginBottom: "60px" }}

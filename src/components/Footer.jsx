@@ -31,9 +31,9 @@ export default function Footer(props) {
         { url: "https://mcsm.imlazy.ink/", title: "Lazy 三方文档" }
     ]
     let links = [];
-    linksData.forEach(v => {
+    linksData.forEach((v, index) => {
         links.push(
-            <a className={classes.aLink} href={v.url}>{v.title}</a>
+            <a key={index} className={classes.aLink} href={v.url}>{v.title}</a>
         )
     })
     return (

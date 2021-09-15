@@ -32,7 +32,7 @@ export default function Header() {
                         alignItems="center"
                     >
                         <Grid item xs={6}>
-                            <img src="static/logo.png" alt="" srcset="" />
+                            <img src="static/logo.png" alt="" />
                         </Grid>
                         <Grid item xs={6} className={classes.buttons}>
                             <Button color="inherit">Github</Button>

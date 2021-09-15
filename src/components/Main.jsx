@@ -100,7 +100,7 @@ export default class Main extends React.Component {
                         </div>
                         <Hidden mdDown>
                             <div className="page-main-content" style={{ height: "500px" }}>
-                                <img src="./static/index.png" alt="" srcset="" style={{ height: "100%", borderRadius: "4px", border: "1px solid rgba(0, 0, 0, 0.12)" }} />
+                                <img src="./static/index.png" alt="" style={{ height: "100%", borderRadius: "4px", border: "1px solid rgba(0, 0, 0, 0.12)" }} />
                             </div>
                         </Hidden>
 
