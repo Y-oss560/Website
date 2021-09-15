@@ -90,18 +90,18 @@ class App extends React.Component {
                     等等
                   </p>
                   <div className="button-group">
-                    <Button variant="contained" color="secondary" size="large">
+                    <Button variant="contained" color="primary" size="large">
                       爱发电平台
                     </Button>
-                    <Button variant="contained" color="secondary" size="large">
+                    <Button variant="contained" color="primary" size="large">
                       支付宝/微信二维码
                     </Button>
-                    <Button variant="contained" color="primary" size="large">
+                    <Button variant="contained" size="large">
                       加入QQ群
                     </Button>
                   </div>
                   <p className="sub-title">
-                    爱发电平台属于正规众筹赞助平台，但需注册账号和绑定支付宝，如果您嫌麻烦可以直接扫描支付宝/微信二维码备注“赞助人名”并且加入QQ群发送给群主
+                    爱发电平台属于正规赞助平台，你也可以直接扫描支付宝/微信二维码备注“赞助人名”并且加入QQ群发送给群主。
                   </p>
                 </div>
               </Grid>
