@@ -55,8 +55,8 @@ export default class Main extends React.Component {
                     </Grid>
                     <Grid container spacing={0} className="page-main-content">
                         <Grid item lg={5} style={{ width: "100%" }}>
-                            <div style={{ height: "500px", width: "360px", margin: "auto" }}>
-                                <Card variant="outlined" style={{ height: "100%", textAlign: "left" }}>
+                            <div style={{ height: "460px", width: "100%" }}>
+                                <Card variant="outlined" style={{ height: "100%", textAlign: "left", margin: "0px 22px" }}>
                                     <CardContent>
 
                                         <div style={{ padding: " 12px" }}>
@@ -96,7 +96,7 @@ export default class Main extends React.Component {
 
                         <Grid item lg={7} style={{ width: "100%" }}>
                             <Hidden mdDown>
-                                <div style={{ height: "500px" }}>
+                                <div style={{ height: "460px" }}>
                                     <img src="./static/index.png" alt="" style={{ height: "100%", borderRadius: "4px", border: "1px solid rgba(0, 0, 0, 0.12)" }} />
                                 </div>
                             </Hidden>

@@ -35,22 +35,23 @@ export default function Header() {
                             <img src="static/logo.png" alt="" />
                         </Grid>
                         <Grid item xs={8} className={classes.buttons}>
+                            <Hidden mdDown>
+                                <div className="button-group-small">
+                                    <a className="button-alink" href="https://github.com/Suwings/MCSManager-UI" target="_blank" rel="noopener noreferrer">
+                                        <Button style={{ color: "white" }}> MCSM UI</Button>
+                                    </a>
+                                    <a className="button-alink" href="https://github.com/Suwings/MCSManager" target="_blank" rel="noopener noreferrer">
+                                        <Button style={{ color: "white" }}> MCSM 面板端</Button>
+                                    </a>
+                                    <a className="button-alink" href="https://github.com/Suwings/MCSManager-Daemon" target="_blank" rel="noopener noreferrer">
+                                        <Button style={{ color: "white" }}> MCSM 守护进程</Button>
+                                    </a>
 
-                            <div className="button-group-small">
-                                <a className="button-alink" href="https://github.com/Suwings/MCSManager-UI" target="_blank" rel="noopener noreferrer">
-                                    <Button style={{ color: "white" }}> MCSM UI</Button>
-                                </a>
-                                <a className="button-alink" href="https://github.com/Suwings/MCSManager" target="_blank" rel="noopener noreferrer">
-                                    <Button style={{ color: "white" }}> MCSM 面板端</Button>
-                                </a>
-                                <a className="button-alink" href="https://github.com/Suwings/MCSManager-Daemon" target="_blank" rel="noopener noreferrer">
-                                    <Button style={{ color: "white" }}> MCSM 守护进程</Button>
-                                </a>
-
-                                <a className="button-alink" href="https://mcsmanager.com/" target="_blank" rel="noopener noreferrer">
-                                    <Button style={{ color: "white" }}> MCSM 8 版本</Button>
-                                </a>
-                            </div>
+                                    <a className="button-alink" href="https://mcsmanager.com/" target="_blank" rel="noopener noreferrer">
+                                        <Button style={{ color: "white" }}> MCSM 8 版本</Button>
+                                    </a>
+                                </div>
+                            </Hidden>
                         </Grid>
                     </Grid>
                 </Container>
