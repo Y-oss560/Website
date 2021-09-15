@@ -20,7 +20,9 @@ code {
     monospace;
 }
 
-
+.MuiButton-root {
+  text-transform: capitalize !important;
+}
 .page{
   padding: 80px 0;
 }
@@ -34,7 +36,7 @@ code {
 
 .page-main-content{
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 .page-download-panel{
