@@ -7,8 +7,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import '@fontsource/roboto';
 import Header from "./components/Header";
 import Main from "./components/Main";
+import Footer from "./components/Footer";
 
 
 class App extends React.Component {
@@ -23,6 +25,9 @@ class App extends React.Component {
         </div>
         <div className="page page-bg-gray">
           bbb
+        </div>
+        <div>
+          <Footer></Footer>
         </div>
       </div>
     )
