@@ -89,3 +89,10 @@ padding: 12px 0px;
 .button-alink{
   text-decoration: none !important;
 }
+
+@media  screen and (max-width: 500px) {
+  .page-main-content{
+    text-align: center;
+    padding: 48px 0px;
+  }
+}

@@ -17,9 +17,9 @@ export default class Main extends React.Component {
         let position = 0;
         this.pageMainElement.style.backgroundPositionX = position + "px";
         setInterval(() => {
-            position += 0.5;
+            position += 0.25;
             this.pageMainElement.style.backgroundPositionX = `${position}px`;
-            if (position > 999999) position = 0;
+            if (position > 99999) position = 0;
         }, 20);
     }
 
@@ -53,14 +53,9 @@ export default class Main extends React.Component {
                             <p>现在处于内部开发测试中，有且只有赞助人员可以优先获得体验，您还无法免费下载它</p>
                         </div>
                     </Grid>
-
-                    <Grid container
-                        spacing={2}
-                        direction="row"
-                        justifyContent="space-between"
-                        alignItems="center">
-                        <div className="page-main-content">
-                            <div style={{ height: "500px", width: "360px" }}>
+                    <Grid container spacing={0} className="page-main-content">
+                        <Grid item lg={5} style={{ width: "100%" }}>
+                            <div style={{ height: "500px", width: "360px", margin: "auto" }}>
                                 <Card variant="outlined" style={{ height: "100%", textAlign: "left" }}>
                                     <CardContent>
 
@@ -97,13 +92,15 @@ export default class Main extends React.Component {
                                     </CardContent>
                                 </Card>
                             </div>
-                        </div>
-                        <Hidden mdDown>
-                            <div className="page-main-content" style={{ height: "500px" }}>
-                                <img src="./static/index.png" alt="" style={{ height: "100%", borderRadius: "4px", border: "1px solid rgba(0, 0, 0, 0.12)" }} />
-                            </div>
-                        </Hidden>
+                        </Grid>
 
+                        <Grid item lg={7} style={{ width: "100%" }}>
+                            <Hidden mdDown>
+                                <div style={{ height: "500px" }}>
+                                    <img src="./static/index.png" alt="" style={{ height: "100%", borderRadius: "4px", border: "1px solid rgba(0, 0, 0, 0.12)" }} />
+                                </div>
+                            </Hidden>
+                        </Grid>
                     </Grid>
                 </Container>
             </div >
