@@ -47,6 +47,10 @@ code {
 .text-yellow {
   color: #ffc107!important;
 }
+
+.text-gray{
+  color: #666666;
+}
 .text-weight{
   font-weight: 600;
 }

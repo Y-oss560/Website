@@ -17,7 +17,10 @@ import Grid from '@material-ui/core/Grid'
 import { Hidden, Button } from '@material-ui/core';
 import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import LocalAtmIcon from '@material-ui/icons/LocalAtm';
+import Sponsor from "./components/Sponsor";
+import AppsIcon from '@material-ui/icons/Apps';
 import './index.css';
+
 class App extends React.Component {
   render() {
     return (
@@ -48,6 +51,7 @@ class App extends React.Component {
             </Grid>
           </Container>
         </div>
+
         <div className="page page-bg-gray">
           <Container maxWidth="lg">
             <Grid container spacing={2}>
@@ -58,18 +62,69 @@ class App extends React.Component {
               </Hidden>
               <Grid item md={8}>
                 <div className="page-content">
-                  <h1>多节点集中控制</h1>
-                  <p>现在已经支持一个控制面板端集中管理控制多台远程主机，任意的远程主机均可供给任何面板端使用</p>
+                  <h1>更好的稳定性，更多的扩展性</h1>
+                  <p>采用 Typescript 全面重构，守护进程经过大规模压力测试与多次内部测试，拥有更好的稳定性与可靠性。采用 90% 的 HTTP 接口和 20% 的 WebSocket 接口，几乎所有面板功能接口就是 API 接口。</p>
                   <p>
-                    <Button variant="contained" color="primary" size="large">
-                      学习原理
-                    </Button>
                   </p>
                 </div>
+
               </Grid>
             </Grid>
           </Container>
+          <Container maxWidth="lg" style={{ marginTop: "18px" }}>
+            <Grid container spacing={10}>
+
+              <Grid item md={6}>
+                <div className="page-content">
+                  <h1>更强更齐全的API接口</h1>
+                  <p>如果您是一位开发者，那么这些 API 接口相一定能够得到您的爱慕，我们提供了比上一代多两倍的接口与更齐全的数据格式。</p>
+                  <div className="button-group">
+                    <Button variant="contained" size="large">
+                      查看文档
+                    </Button>
+                  </div>
+                </div>
+              </Grid>
+
+              <Grid item md={6}>
+                <Grid container spacing={2}>
+                  <div className="page-content">
+                    <h1>多节点集中控制</h1>
+                    <p>现在已经支持一个控制面板端集中管理控制多台远程主机，任意的远程主机均可供给任何面板端使用。</p>
+                    <p>
+                      <Button variant="contained" size="large">
+                        学习原理
+                      </Button>
+                    </p>
+                  </div>
+                </Grid>
+              </Grid>
+
+              <Grid item md={6}>
+                <div className="page-content">
+                  <h1>开箱即用</h1>
+                  <p>在 Windows 下，您只需要下载压缩包双击即可运行面板，接下来的环境与相应配置面板将会自动完成，并且不会污染您系统注册表与任何环境。在 Linux 下也仅仅只需要使用一键安装脚本即可安装。</p>
+                </div>
+              </Grid>
+
+              <Grid item md={6}>
+                <div className="page-content">
+                  <h1>更强更齐全的API接口</h1>
+                  <p>如果您是一位开发者，那么这些 API 接口相一定能够得到您的爱慕，我们提供了比上一代多两倍的接口与更齐全的数据格式。</p>
+                  <div className="button-group">
+                    <Button variant="contained" size="large">
+                      查看文档
+                    </Button>
+                  </div>
+                </div>
+              </Grid>
+
+            </Grid>
+
+          </Container>
         </div>
+
+
         <div className="page">
           <Container maxWidth="lg">
             <Grid container spacing={2}>
@@ -87,7 +142,7 @@ class App extends React.Component {
                     <span className="text-weight">上榜官方赞助名单</span>
                     和
                     <span className="text-weight">更好的意见反馈</span>
-                    等等
+                    等等。
                   </p>
                   <div className="button-group">
                     <Button variant="contained" color="primary" size="large">
@@ -105,6 +160,23 @@ class App extends React.Component {
                   </p>
                 </div>
               </Grid>
+            </Grid>
+            {/* 赞助名单 */}
+            <Sponsor></Sponsor>
+
+            <Grid
+              container
+              spacing={1}
+              direction="row"
+              justify="center"
+              alignItems="center"
+              alignContent="center"
+              wrap="nowrap"
+            >
+              <div style={{ textAlign: "center" }}>
+                <h3>没有上述名单成员的支持与赞助，就不会有 MCSManager 项目的长期维护。</h3>
+                <p className="text-gray">对上述名单全体成员的无私奉献表达谢意。</p>
+              </div>
             </Grid>
           </Container>
         </div>
