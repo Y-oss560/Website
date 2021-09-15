@@ -1,40 +1,49 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import MenuIcon from '@material-ui/icons/Menu';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
-
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//         height: "100%",
-//         backgroundColor: "red"
-//     }
-// }));
-
-// export default function Main() {
-//     const classes = useStyles();
-//     return (
-//         <div className={classes.root}>
-//             A
-//             {props.Header}
-//         </div>
-//     )
-
-// }
+import Container from '@material-ui/core/Container'
+import { Grid } from '@material-ui/core';
 
 export default class Main extends React.Component {
+
     render() {
         return (
             <div style={{
-                height: "100%",
-                backgroundColor: "rgb(29,39,43)"
+                paddingBottom: "20px",
+                backgroundColor: "rgb(29,39,43)",
+                color: "white",
+                minHeight: "660px"
             }}>
-                {this.props.header}
-                B
+                <div>
+                    {this.props.header}
+                </div>
+                <Container maxWidth={false}>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                    >
+                        <div className="page-main-content">
+                            <h1>稳定可靠 ，轻量级和开箱即用的 Minecraft 服务端管理面板</h1>
+                            <p>现在，你可以立即下载并免费开始使用！</p>
+                        </div>
+                    </Grid>
+
+                    <Grid container
+                        spacing={2}
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center">
+                        <div className="page-main-content">
+                            <div style={{ height: "500px", width: "340px", backgroundColor: "white" }}>
+                                A
+                            </div>
+                        </div>
+
+                        <div className="page-main-content" style={{ height: "500px" }}>
+                            <img src="./static/index.png" alt="" srcset="" style={{ height: "100%" }} />
+                        </div>
+                    </Grid>
+                </Container>
             </div >
         );
     }

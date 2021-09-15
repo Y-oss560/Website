@@ -16,8 +16,8 @@ import Footer from "./components/Footer";
 class App extends React.Component {
   render() {
     return (
-      <div style={{ height: "100%" }}>
-        <div style={{ height: "100%" }}>
+      <div >
+        <div >
           <Main header={<Header></Header>}></Main>
         </div >
         <div className="page">
