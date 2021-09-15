@@ -47,7 +47,24 @@ code {
 .text-yellow {
   color: #ffc107!important;
 }
+.text-weight{
+  font-weight: 600;
+}
 
 .page-content{
 padding: 12px 0px;
+}
+
+
+/* 响应式按钮组设计 */
+.button-group{
+  margin: -8px;
+}
+.button-group > *{
+  margin: 8px !important;
+}
+
+.sub-title{
+  font-size: 12px;
+  color: #666666;
 }
