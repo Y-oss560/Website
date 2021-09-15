@@ -105,7 +105,7 @@ class App extends React.Component {
 
               <Grid item md={6}>
                 <div className="page-content">
-                  <h1>开箱即用</h1>
+                  <h1>更快的开箱即用</h1>
                   <p>在 Windows 下，您只需要下载压缩包双击即可运行面板，接下来的环境与相应配置面板将会自动完成。在 Linux 下也仅仅只需要使用一键安装脚本即可安装。</p>
                 </div>
               </Grid>

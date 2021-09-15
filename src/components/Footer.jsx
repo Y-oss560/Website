@@ -41,7 +41,7 @@ export default function Footer(props) {
         <div className={classes.root} >
             <Container maxWidth="lg">
                 <p className={classes.text}>
-                    遵循 GPL 开源协议且商业使用需授权 - 版权所有 © 2021 Suwings All rights reserved.
+                    遵循 GPL 开源协议且商业使用需授权 - 版权所有 © 2021 <a className={classes.a} href="https://github.com/Suwings">Suwings</a> All rights reserved.
                 </p>
                 <p className={classes.text}>
                     <a className={classes.a} href="http://www.beian.miit.gov.cn/">湘ICP备17022362号</a>
