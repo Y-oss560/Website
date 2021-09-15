@@ -7,13 +7,29 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 export default class Main extends React.Component {
 
+    constructor() {
+        super();
+        this.pageMainElement = null;
+    }
+
+    componentDidMount() {
+        console.log(this.pageMainElement);
+        let position = 0;
+        this.pageMainElement.style.backgroundPositionX = position + "px";
+        setInterval(() => {
+            position += 0.5;
+            this.pageMainElement.style.backgroundPositionX = `${position}px`;
+            if (position > 999999) position = 0;
+        }, 20);
+    }
+
     toGithub() {
         window.open("https://github.com/Suwings/MCSManager")
     }
 
     render() {
         return (
-            <div className="page-main">
+            <div className="page-main" ref={el => this.pageMainElement = el}>
                 <div>
                     {this.props.header}
                 </div>
