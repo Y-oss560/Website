@@ -21,7 +21,7 @@ export default class Main extends React.Component {
                 <div>
                     {this.props.header}
                 </div>
-                <Container maxWidth={false}>
+                <Container maxWidth="lg">
                     <Grid
                         container
                         direction="row"
@@ -45,7 +45,7 @@ export default class Main extends React.Component {
                     <Grid container
                         spacing={2}
                         direction="row"
-                        justifyContent="center"
+                        justifyContent="space-between"
                         alignItems="center">
                         <div className="pa  ge-main-content">
                             <div style={{ height: "500px", width: "360px" }}>
