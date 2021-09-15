@@ -13,12 +13,7 @@ export default class Main extends React.Component {
 
     render() {
         return (
-            <div style={{
-                paddingBottom: "20px",
-                backgroundColor: "rgb(29,39,43)",
-                color: "white",
-                minHeight: "660px"
-            }}>
+            <div className="page-main">
                 <div>
                     {this.props.header}
                 </div>
