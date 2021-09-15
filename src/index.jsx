@@ -20,7 +20,7 @@ import LocalAtmIcon from '@material-ui/icons/LocalAtm';
 import Sponsor from "./components/Sponsor";
 import AppsIcon from '@material-ui/icons/Apps';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-
+import ExploreIcon from '@material-ui/icons/Explore';
 
 import './index.css';
 
@@ -161,7 +161,6 @@ class App extends React.Component {
             </Grid>
             {/* 赞助名单 */}
             <Sponsor></Sponsor>
-
             <Grid
               container
               spacing={1}
@@ -178,6 +177,37 @@ class App extends React.Component {
             </Grid>
           </Container>
         </div>
+
+
+        <div className="page page-bg-gray">
+          <Container maxWidth="lg">
+            <Grid container spacing={2}>
+              <Hidden mdDown>
+                <Grid item md={4}>
+                  <ExploreIcon style={{ fontSize: 220 }}></ExploreIcon>
+                </Grid>
+              </Hidden>
+              <Grid item md={8}>
+                <div className="page-content">
+                  <h1>旧版本迁移</h1>
+                  <p>两者版本数据文件差异过大，无法直接升级迁移。如果您已经形成自己的产品链或部署一切正常，可以不必考虑迁移升级到 MCSManager 9 版本，您依然可以继续使用 MCSManager 8 版本。</p>
+                  <div className="button-group">
+                    <Button variant="contained" color="primary" size="large">
+                      MCSManager 8 官方网站
+                    </Button>
+                    <Button variant="contained" color="primary" size="large">
+                      迁移教程
+                    </Button>
+                  </div>
+                </div>
+
+              </Grid>
+            </Grid>
+          </Container>
+
+        </div>
+
+
         <div>
           <Footer></Footer>
         </div>
