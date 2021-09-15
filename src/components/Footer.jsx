@@ -6,8 +6,8 @@ const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: "rgb(28,39,43)",
         color: "#c2c2c2",
-        fontSize: "12px",
-        padding: "20px 0px"
+        fontSize: "13px",
+        padding: "60px 0px"
     },
     text: {
         color: "#c2c2c2",
@@ -26,9 +26,9 @@ export default function Footer(props) {
     const classes = useStyles();
     const linksData = [
         { url: "http://mcllxz.cc:88/", title: "LL Town Server" },
-        { url: "http://www.mcbbs.net/", title: "MCBBS 论坛" },
-        { url: "https://www.minebbs.com/", title: "MineBBS 论坛" },
-        { url: "https://mcsm.imlazy.ink/", title: "Lazy 文档" }
+        { url: "http://www.mcbbs.net/", title: "Mcbbs 论坛" },
+        { url: "https://www.minebbs.com/", title: "Minebbs 论坛" },
+        { url: "https://mcsm.imlazy.ink/", title: "Lazy 三方文档" }
     ]
     let links = [];
     linksData.forEach(v => {
@@ -39,7 +39,7 @@ export default function Footer(props) {
     return (
 
         <div className={classes.root} >
-            <Container maxWidth={false}>
+            <Container maxWidth="lg">
                 <p className={classes.text}>
                     遵循 GPL 开源协议且商业使用需授权 - 版权所有 © 2021 Suwings All rights reserved.
                 </p>
