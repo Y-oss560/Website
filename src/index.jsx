@@ -45,9 +45,11 @@ class App extends React.Component {
                   <p>MCSManager 面板（简称：MCSM 面板）是一款全中文，轻量级，开箱即用，多实例和支持 Docker 的 Minecraft 服务端管理面板。
                     <br /> 在 Minecraft Java 版中已有一定的流行程度，它可以帮助你集中管理多个服务器，又或者分配账号供其他人使用而不必过于担心安全问题，对于商业活动也有一定的基础功能。</p>
                   <div className="button-group">
-                    <Button variant="contained" color="primary" size="large">
-                      了解更多
-                    </Button>
+                    <a className="button-alink" href="https://github.com/Suwings/MCSManager/issues/467" target="_blank" rel="noopener noreferrer">
+                      <Button variant="contained" color="primary" size="large">
+                        了解更多
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </Grid>
@@ -82,7 +84,7 @@ class App extends React.Component {
                   <h1>更齐全的 API 接口</h1>
                   <p>如果您是一位开发者，那么这些 API 接口相一定能够得到您的爱慕，我们提供了比上一代多两倍的接口与更齐全的数据格式。</p>
                   <div className="button-group">
-                    <Button variant="contained" size="large">
+                    <Button variant="contained" size="large" disabled={true}>
                       查看文档
                     </Button>
                   </div>
@@ -95,7 +97,7 @@ class App extends React.Component {
                     <h1>多节点集中控制</h1>
                     <p>现在已经支持一个控制面板端集中管理控制多台远程主机，任意的远程主机均可供给任何面板端使用。</p>
                     <p>
-                      <Button variant="contained" size="large">
+                      <Button variant="contained" size="large" disabled={true}>
                         学习原理
                       </Button>
                     </p>
@@ -143,13 +145,13 @@ class App extends React.Component {
                     等等。
                   </p>
                   <div className="button-group">
-                    <Button variant="contained" color="primary" size="large">
+                    <Button variant="contained" color="primary" size="large" onClick={() => window.open("https://afdian.net/@mcsmanager")}>
                       爱发电平台
                     </Button>
                     <Button variant="contained" color="primary" size="large">
                       支付宝/微信二维码
                     </Button>
-                    <Button variant="contained" size="large">
+                    <Button variant="contained" size="large" onClick={() => window.open("https://jq.qq.com/?_wv=1027&k=kCZMJRBn")}>
                       加入QQ群
                     </Button>
                   </div>
@@ -192,12 +194,16 @@ class App extends React.Component {
                   <h1>旧版本迁移</h1>
                   <p>两者版本数据文件差异过大，无法直接升级迁移。如果您已经形成自己的产品链或部署一切正常，可以不必考虑迁移升级到 MCSManager 9 版本，您依然可以继续使用 MCSManager 8 版本。</p>
                   <div className="button-group">
-                    <Button variant="contained" color="primary" size="large">
-                      MCSManager 8 官方网站
-                    </Button>
-                    <Button variant="contained" color="primary" size="large">
-                      迁移教程
-                    </Button>
+                    <a className="button-alink" href="https://mcsmanager.com/" target="_blank" rel="noopener noreferrer">
+                      <Button variant="contained" color="primary" size="large" >
+                        MCSManager 8 官方网站
+                      </Button>
+                    </a>
+                    <a className="button-alink" href="https://github.com/Suwings/MCSManager/wiki/%E5%8D%87%E7%BA%A7%E5%88%B0-MCSManager-9.0" target="_blank" rel="noopener noreferrer">
+                      <Button variant="contained" color="primary" size="large">
+                        迁移教程
+                      </Button>
+                    </a>
                   </div>
                 </div>
 

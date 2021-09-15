@@ -25,17 +25,32 @@ export default function Header() {
             <Toolbar>
                 <Container maxWidth="lg">
                     <Grid
-                        spacing={2}
+                        spacing={0}
                         container
                         direction="row"
                         justifyContent="space-between"
                         alignItems="center"
                     >
-                        <Grid item xs={6}>
+                        <Grid item xs={4}>
                             <img src="static/logo.png" alt="" />
                         </Grid>
-                        <Grid item xs={6} className={classes.buttons}>
-                            <Button color="inherit">Github</Button>
+                        <Grid item xs={8} className={classes.buttons}>
+
+                            <div className="button-group-small">
+                                <a className="button-alink" href="https://github.com/Suwings/MCSManager-UI" target="_blank" rel="noopener noreferrer">
+                                    <Button style={{ color: "white" }}> MCSM UI</Button>
+                                </a>
+                                <a className="button-alink" href="https://github.com/Suwings/MCSManager" target="_blank" rel="noopener noreferrer">
+                                    <Button style={{ color: "white" }}> MCSM 面板端</Button>
+                                </a>
+                                <a className="button-alink" href="https://github.com/Suwings/MCSManager-Daemon" target="_blank" rel="noopener noreferrer">
+                                    <Button style={{ color: "white" }}> MCSM 守护进程</Button>
+                                </a>
+
+                                <a className="button-alink" href="https://mcsmanager.com/" target="_blank" rel="noopener noreferrer">
+                                    <Button style={{ color: "white" }}> MCSM 8 版本</Button>
+                                </a>
+                            </div>
                         </Grid>
                     </Grid>
                 </Container>

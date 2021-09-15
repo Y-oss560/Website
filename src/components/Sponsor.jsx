@@ -133,7 +133,8 @@ export default class Sponsor extends React.Component {
                 >
                     {sponsorElems}
                 </Grid>
-                <h2>所有赞助成员</h2>
+                <h2 style={{ marginBottom: "0px" }}>所有赞助成员</h2>
+                <p className="sub-title">赞助名单并不是实时刷新，由人工定期进行数据更新，</p>
                 <Grid container spacing={1}>
                     {moreSponsor}
                     <Grid item xs={12}>
