@@ -76,7 +76,7 @@ class App extends React.Component {
 
               <Grid item md={6}>
                 <div className="page-content">
-                  <h1>更强更齐全的API接口</h1>
+                  <h1>更齐全的 API 接口</h1>
                   <p>如果您是一位开发者，那么这些 API 接口相一定能够得到您的爱慕，我们提供了比上一代多两倍的接口与更齐全的数据格式。</p>
                   <div className="button-group">
                     <Button variant="contained" size="large">
@@ -103,19 +103,14 @@ class App extends React.Component {
               <Grid item md={6}>
                 <div className="page-content">
                   <h1>开箱即用</h1>
-                  <p>在 Windows 下，您只需要下载压缩包双击即可运行面板，接下来的环境与相应配置面板将会自动完成，并且不会污染您系统注册表与任何环境。在 Linux 下也仅仅只需要使用一键安装脚本即可安装。</p>
+                  <p>在 Windows 下，您只需要下载压缩包双击即可运行面板，接下来的环境与相应配置面板将会自动完成。在 Linux 下也仅仅只需要使用一键安装脚本即可安装。</p>
                 </div>
               </Grid>
 
               <Grid item md={6}>
                 <div className="page-content">
-                  <h1>更强更齐全的API接口</h1>
-                  <p>如果您是一位开发者，那么这些 API 接口相一定能够得到您的爱慕，我们提供了比上一代多两倍的接口与更齐全的数据格式。</p>
-                  <div className="button-group">
-                    <Button variant="contained" size="large">
-                      查看文档
-                    </Button>
-                  </div>
+                  <h1>更优雅的网页设计</h1>
+                  <p>使用 Vue 生态大部分技术与框架，重新设计 UI 与交互方式，打造出更优雅更实用的响应式前端网页。</p>
                 </div>
               </Grid>
 
