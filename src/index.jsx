@@ -19,6 +19,9 @@ import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import LocalAtmIcon from '@material-ui/icons/LocalAtm';
 import Sponsor from "./components/Sponsor";
 import AppsIcon from '@material-ui/icons/Apps';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+
+
 import './index.css';
 
 class App extends React.Component {
@@ -57,7 +60,7 @@ class App extends React.Component {
             <Grid container spacing={2}>
               <Hidden mdDown>
                 <Grid item md={4}>
-                  <AccountTreeIcon style={{ fontSize: 220 }}></AccountTreeIcon>
+                  <DashboardIcon style={{ fontSize: 220 }}></DashboardIcon>
                 </Grid>
               </Hidden>
               <Grid item md={8}>
@@ -71,7 +74,7 @@ class App extends React.Component {
               </Grid>
             </Grid>
           </Container>
-          <Container maxWidth="lg" style={{ marginTop: "18px" }}>
+          <Container maxWidth="lg" style={{ marginTop: "18px", overflow: "hidden" }}>
             <Grid container spacing={10}>
 
               <Grid item md={6}>

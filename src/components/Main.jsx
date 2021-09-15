@@ -4,6 +4,7 @@ import { Button, Card, CardContent, Grid, Hidden, Typography } from '@material-u
 import DesktopWindowsIcon from '@material-ui/icons/DesktopWindows';
 import DnsSharpIcon from '@material-ui/icons/DnsSharp';
 import GitHubIcon from '@material-ui/icons/GitHub';
+
 export default class Main extends React.Component {
 
     toGithub() {
@@ -47,7 +48,7 @@ export default class Main extends React.Component {
                         direction="row"
                         justifyContent="space-between"
                         alignItems="center">
-                        <div className="pa  ge-main-content">
+                        <div className="page-main-content">
                             <div style={{ height: "500px", width: "360px" }}>
                                 <Card variant="outlined" style={{ height: "100%", textAlign: "left" }}>
                                     <CardContent>
