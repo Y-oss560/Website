@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Header() {
     const classes = useStyles();
     return (
-        <AppBar position="static">
+        <AppBar position="static" style={{ backgroundColor: "rgb(28,39,43)" }}>
             <Toolbar>
                 <Grid
                     spacing={2}
@@ -30,9 +30,7 @@ export default function Header() {
                     alignItems="center"
                 >
                     <Grid item xs={6}>
-                        <Typography variant="h6">
-                            MCSManager
-                        </Typography>
+                        <img src="static/logo.png" alt="" srcset="" />
                     </Grid>
                     <Grid item xs={6} className={classes.buttons}>
                         <Button color="inherit">下载</Button>
