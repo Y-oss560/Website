@@ -1,14 +1,56 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { Grid, Container } from '@material-ui/core';
 
-export default class Main extends React.Component {
-    render() {
-        return (
-            <div style={{
-                height: "100%",
-                backgroundColor: "rgb(28,39,43)"
-            }}>
-                版权所有 Suwings
-            </div >
-        );
+const useStyles = makeStyles((theme) => ({
+    root: {
+        backgroundColor: "rgb(28,39,43)",
+        color: "#c2c2c2",
+        fontSize: "12px",
+        padding: "20px 0px"
+    },
+    text: {
+        color: "#c2c2c2",
+    },
+    a: {
+        color: "#c2c2c2",
+    },
+    aLink: {
+        color: "#c2c2c2",
+        display: "inline-block",
+        margin: "0 4px 0px 4px"
     }
+}));
+
+export default function Footer(props) {
+    const classes = useStyles();
+    const linksData = [
+        { url: "http://mcllxz.cc:88/", title: "LL Town Server" },
+        { url: "http://www.mcbbs.net/", title: "MCBBS 论坛" },
+        { url: "https://www.minebbs.com/", title: "MineBBS 论坛" },
+        { url: "https://mcsm.imlazy.ink/", title: "Lazy 文档" }
+    ]
+    let links = [];
+    linksData.forEach(v => {
+        links.push(
+            <a className={classes.aLink} href={v.url}>{v.title}</a>
+        )
+    })
+    return (
+
+        <div className={classes.root} >
+            <Container maxWidth={false}>
+                <p className={classes.text}>
+                    遵循 GPL 开源协议且商业使用需授权 - 版权所有 © 2021 Suwings All rights reserved.
+                </p>
+                <p className={classes.text}>
+                    <a className={classes.a} href="http://www.beian.miit.gov.cn/">湘ICP备17022362号</a>
+                    <span> - 友情链接</span>
+                    {links}
+                </p>
+
+            </Container>
+        </div >
+    );
+
 }

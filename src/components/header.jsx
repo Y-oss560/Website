@@ -22,11 +22,13 @@ export default function Header() {
     return (
         <AppBar position="static">
             <Toolbar>
-                <Grid spacing={2}
+                <Grid
+                    spacing={2}
                     container
                     direction="row"
                     justifyContent="space-between"
-                    alignItems="center">
+                    alignItems="center"
+                >
                     <Grid item xs={6}>
                         <Typography variant="h6">
                             MCSManager
