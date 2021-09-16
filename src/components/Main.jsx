@@ -56,7 +56,7 @@ export default class Main extends React.Component {
                     <Grid container spacing={0} className="page-main-content">
                         <Grid item lg={5} style={{ width: "100%" }}>
                             <div style={{ height: "460px", width: "100%" }}>
-                                <Card variant="outlined" style={{ height: "100%", textAlign: "left", margin: "0px 22px" }}>
+                                <Card variant="outlined" style={{ height: "100%", textAlign: "left", margin: "0px 28px" }}>
                                     <CardContent>
 
                                         <div style={{ padding: " 12px" }}>

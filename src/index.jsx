@@ -60,11 +60,6 @@ class App extends React.Component {
         <div className="page page-bg-gray">
           <Container maxWidth="lg">
             <Grid container spacing={2}>
-              <Hidden mdDown>
-                <Grid item md={4}>
-                  <DashboardIcon style={{ fontSize: 220 }}></DashboardIcon>
-                </Grid>
-              </Hidden>
               <Grid item md={8}>
                 <div className="page-content">
                   <h1>更好的稳定性，更多的扩展性</h1>
@@ -72,8 +67,12 @@ class App extends React.Component {
                   <p>
                   </p>
                 </div>
-
               </Grid>
+              <Hidden mdDown>
+                <Grid item md={4} style={{ textAlign: "right" }}>
+                  <DashboardIcon style={{ fontSize: 220 }}></DashboardIcon>
+                </Grid>
+              </Hidden>
             </Grid>
           </Container>
           <Container maxWidth="lg" style={{ marginTop: "18px", overflow: "hidden" }}>

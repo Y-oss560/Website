@@ -107,9 +107,9 @@ export default class Sponsor extends React.Component {
         const moreSponsor = [];
         this.state.displayMoreSponsor.forEach((v, index) => {
             moreSponsor.push(
-                <Grid item xs={2} key={index}>
+                <Grid item xs={4} md={2} key={index}>
                     <Card variant="outlined">
-                        <CardContent style={{ padding: "8px" }}>
+                        <CardContent style={{ padding: "8px", height: "66px", overflow: "hidden" }}>
                             <p style={{ margin: "0px", fontSize: "13px" }}><b>{v.name}</b></p>
                             <p style={{ margin: "0px", fontSize: "12px" }}><small>￥{v.price}</small></p>
                             <p style={{ margin: "0px", fontSize: "12px" }} className="sub-title"><small>{v.message ? v.message : "--"}</small></p>

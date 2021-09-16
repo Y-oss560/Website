@@ -35,8 +35,9 @@ export default function Header() {
                             <img src="static/logo.png" alt="" />
                         </Grid>
                         <Grid item xs={8} className={classes.buttons}>
-                            <Hidden mdDown>
-                                <div className="button-group-small">
+
+                            <div className="button-group-small">
+                                <Hidden mdDown>
                                     <a className="button-alink" href="https://github.com/Suwings/MCSManager-UI" target="_blank" rel="noopener noreferrer">
                                         <Button style={{ color: "white" }}> MCSM UI</Button>
                                     </a>
@@ -46,12 +47,11 @@ export default function Header() {
                                     <a className="button-alink" href="https://github.com/Suwings/MCSManager-Daemon" target="_blank" rel="noopener noreferrer">
                                         <Button style={{ color: "white" }}> MCSM 守护进程</Button>
                                     </a>
-
-                                    <a className="button-alink" href="https://mcsmanager.com/" target="_blank" rel="noopener noreferrer">
-                                        <Button style={{ color: "white" }}> MCSM 8 版本</Button>
-                                    </a>
-                                </div>
-                            </Hidden>
+                                </Hidden>
+                                <a className="button-alink" href="https://mcsmanager.com/" target="_blank" rel="noopener noreferrer">
+                                    <Button style={{ color: "white" }}> MCSM 8 版本</Button>
+                                </a>
+                            </div>
                         </Grid>
                     </Grid>
                 </Container>
