@@ -21,17 +21,14 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "rgb(0 0 0 / 32%)",
         position: "fixed",
         top: " 0px",
-        transition: "all 0.5s"
     },
     appbar2: {
         backgroundColor: "rgb(35 34 40 / 100%)",
         position: "fixed",
         top: " 0px",
-        transition: "all 0.5s"
     },
     appbar3: {
         backgroundColor: "rgb(35 34 40 / 100%)",
-        transition: "all 0.5s"
     }
 }));
 
@@ -42,34 +39,29 @@ export default function Header() {
 
     const [appBarClass, setAppBarClass] = useState("appbar1");
 
+    function setSpecialClass() {
+        if (pathname !== "/")
+            setAppBarClass("appbar3")
+        else
+            setAppBarClass("appbar1")
+    }
 
 
     // Similar to componentDidMount and componentDidUpdate
     useEffect(() => {
-        if (pathname !== "/") {
-            setAppBarClass("appbar3")
-            window.onscroll = function () {
-                console.log(window.scrollY, appBarClass, pathname)
-                if (window.scrollY > 0) {
-                    setAppBarClass("appbar2")
-                } else {
-                    setAppBarClass("appbar3")
-                }
-            }
-        } else {
-            window.onscroll = function () {
-                console.log(window.scrollY, appBarClass, pathname)
-                if (window.scrollY > 0) {
-                    setAppBarClass("appbar2")
-                } else {
-                    setAppBarClass("appbar1")
-                }
+        console.log("useEffect()")
+        setSpecialClass();
+        window.onscroll = function () {
+            if (window.scrollY > 0) {
+                setAppBarClass("appbar2")
+            } else {
+                setSpecialClass();
             }
         }
         return function () {
             window.onscroll = () => { }
         }
-    });
+    }, [pathname]);
 
 
     return (
@@ -84,14 +76,16 @@ export default function Header() {
                         alignItems="center"
                     >
                         <Grid item xs={4}>
-                            <img src="static/logo.png" alt="" />
+                            <Link to="/">
+                                <img src="static/logo.png" alt="" />
+                            </Link>
                         </Grid>
                         <Grid item xs={8} className={classes.buttons}>
 
                             <div className="button-group-small">
                                 <Hidden mdDown>
-                                    <Link to="/about">
-                                        <Button style={{ color: "white" }}> 关于我们</Button>
+                                    <Link to="/document">
+                                        <Button style={{ color: "white" }}> 文档</Button>
                                     </Link>
                                     <a className="button-alink" href="https://github.com/Suwings/MCSManager-UI" target="_blank" rel="noopener noreferrer">
                                         <Button style={{ color: "white" }}> MCSM UI</Button>
