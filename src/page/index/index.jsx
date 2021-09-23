@@ -7,10 +7,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// import '@fontsource/roboto';
 import Main from "../../components/Main";
 import Sponsor from "../../components/Sponsor";
-
+import {
+  Link
+} from "react-router-dom";
 
 import Container from '@material-ui/core/Container'
 import BubbleChartIcon from '@material-ui/icons/BubbleChart';
@@ -81,9 +82,11 @@ export default class Index extends React.Component {
                   <h1>更齐全的 API 接口</h1>
                   <p>如果您是一位开发者，那么这些 API 接口相一定能够得到您的爱慕，我们提供了比上一代多两倍的接口与更齐全的数据格式。</p>
                   <div className="button-group">
-                    <Button variant="contained" size="large" disabled={true}>
-                      查看文档
-                    </Button>
+                    <Link to="/document">
+                      <Button variant="contained" size="large" >
+                        查看文档
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </Grid>

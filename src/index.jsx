@@ -15,10 +15,12 @@ import {
 
 import Index from "./page/index";
 import About from "./page/about";
-
+import Document from "./page/document";
 
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+
+import "./common.css"
 
 class App extends React.Component {
   render() {
@@ -27,6 +29,9 @@ class App extends React.Component {
         <Router>
           <Header></Header>
           <Switch>
+            <Route path="/document">
+              <Document />
+            </Route>
             <Route path="/about">
               <About />
             </Route>

@@ -8,6 +8,7 @@ import { Hidden, Container } from '@material-ui/core';
 import {
     Link,
 } from "react-router-dom";
+import { Router, useParams, useLocation } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,30 +21,53 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "rgb(0 0 0 / 32%)",
         position: "fixed",
         top: " 0px",
-        transition: "all 1s"
+        transition: "all 0.5s"
     },
     appbar2: {
-        backgroundColor: "rgb(40 41 47 / 100%)",
+        backgroundColor: "rgb(35 34 40 / 100%)",
         position: "fixed",
         top: " 0px",
-        transition: "all 1s"
+        transition: "all 0.5s"
+    },
+    appbar3: {
+        backgroundColor: "rgb(35 34 40 / 100%)",
+        transition: "all 0.5s"
     }
 }));
 
 export default function Header() {
     const classes = useStyles();
 
+    const { pathname } = useLocation();
+
     const [appBarClass, setAppBarClass] = useState("appbar1");
+
+
 
     // Similar to componentDidMount and componentDidUpdate
     useEffect(() => {
-        window.onscroll = function () {
-            console.log(window.scrollY, appBarClass)
-            if (window.scrollY >= 200) {
-                setAppBarClass("appbar2")
-            } else {
-                setAppBarClass("appbar1")
+        if (pathname !== "/") {
+            setAppBarClass("appbar3")
+            window.onscroll = function () {
+                console.log(window.scrollY, appBarClass, pathname)
+                if (window.scrollY > 0) {
+                    setAppBarClass("appbar2")
+                } else {
+                    setAppBarClass("appbar3")
+                }
             }
+        } else {
+            window.onscroll = function () {
+                console.log(window.scrollY, appBarClass, pathname)
+                if (window.scrollY > 0) {
+                    setAppBarClass("appbar2")
+                } else {
+                    setAppBarClass("appbar1")
+                }
+            }
+        }
+        return function () {
+            window.onscroll = () => { }
         }
     });
 

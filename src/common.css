@@ -1,0 +1,87 @@
+a {
+  text-decoration: none;
+}
+@font-face {
+  font-family: hmos;
+  src: url(assets/font.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: "hmos", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+html {
+  /* height: 100%; */
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.MuiButton-root {
+  text-transform: capitalize !important;
+}
+.page {
+  padding: 80px 0;
+}
+.page-bg-white {
+  background-color: white;
+}
+.page-bg-gray {
+  background-color: rgb(248, 248, 251);
+}
+
+.page-main-content {
+  text-align: center;
+  padding: 48px 20px;
+}
+
+.page-download-panel {
+  position: relative;
+}
+
+.text-yellow {
+  color: #ffc107 !important;
+}
+
+.text-gray {
+  color: #666666;
+}
+.text-weight {
+  font-weight: 600;
+}
+
+/* 响应式按钮组设计 */
+.button-group {
+  margin: -8px;
+}
+.button-group > * {
+  margin: 8px !important;
+}
+
+.button-group-small {
+  margin: -4px;
+}
+.button-group-small > * {
+  margin: 4px !important;
+}
+.sub-title {
+  font-size: 12px;
+  color: #666666;
+}
+
+.button-alink {
+  text-decoration: none !important;
+}
+
+@media screen and (max-width: 500px) {
+  .page-main-content {
+    text-align: center;
+    padding: 48px 0px;
+  }
+}
