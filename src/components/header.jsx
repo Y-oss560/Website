@@ -20,12 +20,12 @@ const useStyles = makeStyles((theme) => ({
     appbar1: {
         backgroundColor: "rgb(0 0 0 / 32%)",
         position: "fixed",
-        top: " 0px",
+        top: "0px",
     },
     appbar2: {
         backgroundColor: "rgb(35 34 40 / 100%)",
         position: "fixed",
-        top: " 0px",
+        top: "0px",
     },
     appbar3: {
         backgroundColor: "rgb(35 34 40 / 100%)",
