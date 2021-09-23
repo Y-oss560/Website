@@ -10,17 +10,22 @@ export default class Main extends React.Component {
     constructor() {
         super();
         this.pageMainElement = null;
+        this.task = null;
     }
 
     componentDidMount() {
         console.log(this.pageMainElement);
         let position = 0;
         this.pageMainElement.style.backgroundPositionX = position + "px";
-        setInterval(() => {
+        this.task = setInterval(() => {
             position += 0.25;
             this.pageMainElement.style.backgroundPositionX = `${position}px`;
             if (position > 99999) position = 0;
         }, 20);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.task)
     }
 
     toGithub() {
@@ -30,9 +35,6 @@ export default class Main extends React.Component {
     render() {
         return (
             <div className="page-main" ref={el => this.pageMainElement = el}>
-                <div>
-                    {this.props.header}
-                </div>
                 <Container maxWidth="lg">
                     <Grid
                         container

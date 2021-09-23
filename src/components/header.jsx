@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import MenuIcon from '@material-ui/icons/Menu';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { Hidden, Container } from '@material-ui/core';
+import {
+    Link,
+} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -16,12 +16,40 @@ const useStyles = makeStyles((theme) => ({
     buttons: {
         textAlign: 'right'
     },
+    appbar1: {
+        backgroundColor: "rgb(0 0 0 / 32%)",
+        position: "fixed",
+        top: " 0px",
+        transition: "all 1s"
+    },
+    appbar2: {
+        backgroundColor: "rgb(40 41 47 / 100%)",
+        position: "fixed",
+        top: " 0px",
+        transition: "all 1s"
+    }
 }));
 
 export default function Header() {
     const classes = useStyles();
+
+    const [appBarClass, setAppBarClass] = useState("appbar1");
+
+    // Similar to componentDidMount and componentDidUpdate
+    useEffect(() => {
+        window.onscroll = function () {
+            console.log(window.scrollY, appBarClass)
+            if (window.scrollY >= 200) {
+                setAppBarClass("appbar2")
+            } else {
+                setAppBarClass("appbar1")
+            }
+        }
+    });
+
+
     return (
-        <AppBar position="static" style={{ backgroundColor: "rgb(0 0 0 / 32%)" }}>
+        <AppBar position="static" className={classes[appBarClass]}>
             <Toolbar>
                 <Container maxWidth="lg">
                     <Grid
@@ -38,6 +66,9 @@ export default function Header() {
 
                             <div className="button-group-small">
                                 <Hidden mdDown>
+                                    <Link to="/about">
+                                        <Button style={{ color: "white" }}> 关于我们</Button>
+                                    </Link>
                                     <a className="button-alink" href="https://github.com/Suwings/MCSManager-UI" target="_blank" rel="noopener noreferrer">
                                         <Button style={{ color: "white" }}> MCSM UI</Button>
                                     </a>
