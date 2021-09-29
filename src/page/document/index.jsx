@@ -13,7 +13,9 @@ import Grid from '@material-ui/core/Grid'
 import ALink from '@material-ui/core/Link'
 import { Link } from "react-router-dom";
 
-import CreateInstanceApi from "./views/CreateInstanceApi";
+import CreateInstanceApi from "./views/CreateInstance";
+
+import Quickly from "./views/Quickly";
 
 export default function Index() {
 
@@ -209,7 +211,7 @@ export default function Index() {
                                 <CreateInstanceApi />
                             </Route>
                             <Route path={`${path}`}>
-                                DOC INDEX
+                                <Quickly />
                             </Route>
                         </Switch>
                     </Grid>
