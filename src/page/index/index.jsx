@@ -39,7 +39,7 @@ export default class Index extends React.Component {
                 </Grid>
               </Hidden>
               <Grid item md={8}>
-                <div className="page-content">
+                <div className="page-content" >
                   <h1>这是什么？</h1>
                   <p>MCSManager 面板（简称：MCSM 面板）是一款全中文，轻量级，开箱即用，多实例和支持 Docker 的 Minecraft 服务端管理面板。
                     <br /> 在 Minecraft Java 版中已有一定的流行程度，它可以帮助你集中管理多个服务器，又或者分配账号供其他人使用而不必过于担心安全问题，对于商业活动也有一定的基础功能。</p>

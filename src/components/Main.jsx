@@ -42,7 +42,7 @@ export default class Main extends React.Component {
                         justifyContent="center"
                         alignItems="center"
                     >
-                        <div className="page-main-content" style={{ marginTop: "10px" }}>
+                        <div className="page-main-content" style={{ marginTop: "80px" }}>
                             <h1 >
                                 <span className="text-yellow">分布式集群</span>，
                                 <span className="text-yellow">可群组</span>，
