@@ -28,7 +28,7 @@ export default function Footer(props) {
         { url: "http://mcllxz.cc:88/", title: "LL Town Server" },
         { url: "http://www.mcbbs.net/", title: "Mcbbs 论坛" },
         { url: "https://www.minebbs.com/", title: "Minebbs 论坛" },
-        { url: "https://mcsm.imlazy.ink/", title: "Lazy 三方文档" }
+        { url: "https://www.lazy.ink/", title: "Lazy's Home" }
     ]
     let links = [];
     linksData.forEach((v, index) => {
