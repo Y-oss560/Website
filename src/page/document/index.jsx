@@ -13,6 +13,7 @@ import Grid from '@material-ui/core/Grid'
 import ALink from '@material-ui/core/Link'
 import { Link } from "react-router-dom";
 
+import QuickStart from "./views/QuickStart";
 import CreateInstanceApi from "./views/CreateInstance";
 
 import Quickly from "./views/Quickly";
@@ -27,7 +28,7 @@ export default function Index() {
         },
         {
             title: "快速开始",
-            to: "",
+            to: "/quick_start",
             type: 1
         },
         {
@@ -205,18 +206,7 @@ export default function Index() {
         <Container maxWidth="lg">
             <div style={{ marginTop: "24px" }}>
                 <Grid container spacing={2}>
-                    <Grid item xs={8}>
-                        <Switch>
-                            <Route path={`${path}/create_instance`}>
-                                <CreateInstanceApi />
-                            </Route>
-                            <Route path={`${path}`}>
-                                <Quickly />
-                            </Route>
-                        </Switch>
-                    </Grid>
                     <Grid item xs={4}>
-
                         <ul style={{ listStyleType: " none" }}>
                             {
                                 navList.map((element) => {
@@ -238,6 +228,20 @@ export default function Index() {
                             }
                         </ul>
                     </Grid>
+                    <Grid item xs={8}>
+                        <Switch>
+                            <Route path={`${path}/quick_start`}>
+                                <QuickStart />
+                            </Route>
+                            <Route path={`${path}/create_instance`}>
+                                <CreateInstanceApi />
+                            </Route>
+                            <Route path={`${path}`}>
+                                <Quickly />
+                            </Route>
+                        </Switch>
+                    </Grid>
+                    
                 </Grid>
             </div>
         </Container>
