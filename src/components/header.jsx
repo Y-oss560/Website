@@ -77,7 +77,7 @@ export default function Header() {
                     >
                         <Grid item xs={4}>
                             <Link to="/">
-                                <img src="static/logo.png" alt="" />
+                                <img src="/static/logo.png" alt="" />
                             </Link>
                         </Grid>
                         <Grid item xs={8} className={classes.buttons}>
