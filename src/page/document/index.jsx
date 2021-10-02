@@ -13,6 +13,11 @@ import Grid from '@material-ui/core/Grid'
 import ALink from '@material-ui/core/Link'
 import { Link } from "react-router-dom";
 
+import Box from '@material-ui/core/Box';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import List from '@material-ui/core/List';
+//import ListItemText from '@material-ui/core/ListItemText';
+
 import QuickStart from "./views/QuickStart";
 import CreateInstanceApi from "./views/CreateInstance";
 
@@ -227,6 +232,29 @@ export default function Index() {
                                 })
                             }
                         </ul>
+                        {/*<Box sx={{ width: '100%', maxWidth: 360 }}>
+                            <nav aria-label="">
+                                <List>
+                                    {
+                                        navList.map((element) => {
+                                        if (element.type === 2) {
+                                            return (
+                                                <li>
+                                                    <p>{element.title}</p>
+                                                </li>
+                                            )
+                                        }
+                                        return (
+                                            <span>
+                                                <ListItemText to={url + element.to} primary="{element.title} | {url + element.to}" />
+                                            </span>
+                                                
+                                        )
+                                    })
+                                    }
+                                </List>
+                            </nav>
+                        </Box>*/}
                     </Grid>
                     <Grid item xs={8}>
                         <Switch>
