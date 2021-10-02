@@ -1,53 +1,38 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    useParams,
-    useRouteMatch
-} from "react-router-dom";
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import ALink from '@material-ui/core/Link'
-import { Link } from "react-router-dom";
 import ReactMarkdown from 'react-markdown'
-
-import Box from '@material-ui/core/Box';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import List from '@material-ui/core/List';
-//import ListItemText from '@material-ui/core/ListItemText';
-
-import QuickStart from "./views/QuickStart";
-import CreateInstanceApi from "./views/CreateInstance";
-
-import Quickly from "./views/Quickly";
-import { links } from './links';
 import $ from "jquery";
 
+import { links } from './links';
 import "./md.css"
+
 
 export default function Index() {
 
     const navList = links()
 
-    let { path, url } = useRouteMatch();
-    const [markdownText, setMarkdownText] = useState("www");
 
+    const [markdownText, setMarkdownText] = useState("开发版本，请选择左侧菜单显示远程动态内容");
+
+    // 选择 API 事件，自动远程加载
     async function onSelectApi(to) {
-        const url = `/markdown${to}.md`;
-        console.log(`Req:${url}`)
+        let url = `/markdown${to}.md`;
+        if (to === "/" || !to) {
+            url = `/markdown/quick_start.md`;
+        }
         const response = $.ajax({
             url,
             success() {
-                console.log(response.responseText)
                 const text = response.responseText;
                 setMarkdownText(text);
             }
         });
 
     }
+
+
 
     return (
         <Container maxWidth="lg">
