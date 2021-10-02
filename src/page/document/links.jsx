@@ -42,7 +42,7 @@ export function links() {
         },
         {
             title: "修改实例",
-            to: "",
+            to: "/edit_instance",
             type: 1
         },
         {

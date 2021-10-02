@@ -26,6 +26,8 @@ import Quickly from "./views/Quickly";
 import { links } from './links';
 import $ from "jquery";
 
+import "./md.css"
+
 export default function Index() {
 
     const navList = links()
@@ -64,7 +66,7 @@ export default function Index() {
                                     }
                                     return (
                                         <li style={{ margin: "4px 0px", fontSize: "13px" }}>
-                                            <ALink onClick={() => onSelectApi(element.to)}>{element.title} | {element.to}</ALink>
+                                            <ALink style={{ cursor: "pointer" }} onClick={() => onSelectApi(element.to)}>{element.title}</ALink>
                                         </li>
                                     )
                                 })
@@ -72,17 +74,6 @@ export default function Index() {
                         </ul>
                     </Grid>
                     <Grid item xs={8}>
-                        {/* <Switch>
-                            <Route path={`${path}/quick_start`}>
-                                <QuickStart />
-                            </Route>
-                            <Route path={`${path}/create_instance`}>
-                                <CreateInstanceApi />
-                            </Route>
-                            <Route path={`${path}`}>
-                                <Quickly />
-                            </Route>
-                        </Switch> */}
                         <ReactMarkdown children={markdownText} />
                     </Grid>
 

@@ -1,0 +1,11 @@
+/* 用于Markdown语法的样式渲染 */
+
+pre {
+    margin: 14px 0px;
+    padding: 16px;
+    background-color: #f8f8f8;
+    border: 1px solid #e7eaed;
+    border-radius: 3px;
+    font-size: 0.9em;
+    overflow-y: auto;
+}
