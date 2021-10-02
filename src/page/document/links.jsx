@@ -41,22 +41,52 @@ export function links() {
             type: 1
         },
         {
-            title: "修改实例",
+            title: "编辑实例",
             to: "/edit_instance",
             type: 1
         },
         {
             title: "删除实例",
+            to: "/delete_instance",
+            type: 1
+        },
+        {
+            title: "获取分布式服务列表",
+            to: "/get_daemonList",
+            type: 1
+        },
+        {
+            title: "普通用户编辑实例",
+            to: "/lowEdit_instance",
+            type: 1
+        },
+        {
+            title: "普通用户更新指定实例配置",
             to: "",
             type: 1
         },
         {
-            title: "获取实例列表",
+            title: "编辑实例（管理）",
             to: "",
             type: 1
         },
         {
-            title: "与实例建立 Websocket 连接",
+            title: "查询实例配置文件列表",
+            to: "",
+            type: 1
+        },
+        {
+            title: "获取指定实例配置文件内容",
+            to: "",
+            type: 1
+        },
+        {
+            title: "更新指定实例配置文件内容",
+            to: "",
+            type: 1
+        },
+        {
+            title: "获取某实例详细信息（管理）",
             to: "",
             type: 1
         },
