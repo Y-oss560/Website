@@ -35,11 +35,7 @@ export function links() {
             to: "",
             type: 2
         },
-        {
-            title: "获取分布式服务列表",
-            to: "/get_daemonList",
-            type: 1
-        },
+
         {
             title: "创建实例",
             to: "/create_instance",
@@ -76,7 +72,7 @@ export function links() {
             type: 1
         },
         {
-            title: "获取某实例详细信息（管理）",
+            title: "获取某实例详细信息",
             to: "/get_instance_info",
             type: 1
         },
@@ -106,33 +102,38 @@ export function links() {
             type: 2
         },
         {
-            title: "创建连接",
-            to: "",
+            title: "仅获取远程服务列表",
+            to: "/get_remote_services",
             type: 1
         },
         {
-            title: "删除连接",
-            to: "",
+            title: "获取所有分布式服务",
+            to: "/get_daemonList",
             type: 1
         },
         {
-            title: "立刻连接",
-            to: "",
+            title: "根据条件查询远程服务实例",
+            to: "/search_remote_services",
             type: 1
         },
         {
-            title: "更新密钥",
-            to: "",
+            title: "新建远程服务",
+            to: "/new_remote_services",
             type: 1
         },
         {
-            title: "获取所有远程服务信息",
-            to: "",
+            title: "删除远程服务",
+            to: "/del_remote_services",
             type: 1
         },
         {
-            title: "根据条件查询远程服务",
-            to: "",
+            title: "编辑远程服务",
+            to: "/edit_remote_services",
+            type: 1
+        },
+        {
+            title: "重新连接远程服务",
+            to: "/reconn_remote_services",
             type: 1
         },
         {
