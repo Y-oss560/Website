@@ -196,5 +196,45 @@ export function links() {
             to: "",
             type: 1
         },
+        {
+            title: "文件管理",
+            to: "",
+            type: 2
+        },
+        {
+            title: "查看指定实例的文件列表",
+            to: "/view_instance_fils_list",
+            type: 1
+        },
+        {
+            title: "新建目录",
+            to: "/mkdir",
+            type: 1
+        },
+        {
+            title: "压缩/解压文件",
+            to: "/compress",
+            type: 1
+        },
+        {
+            title: "编辑/查看文件",
+            to: "/edit_files",
+            type: 1
+        },
+        {
+            title: "复制文件",
+            to: "/copy_files",
+            type: 1
+        },
+        {
+            title: "移动文件",
+            to: "/move_files",
+            type: 1
+        },
+        {
+            title: "删除文件",
+            to: "/delete_files",
+            type: 1
+        }
     ]
 }
