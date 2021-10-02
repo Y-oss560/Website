@@ -36,6 +36,11 @@ export function links() {
             type: 2
         },
         {
+            title: "获取分布式服务列表",
+            to: "/get_daemonList",
+            type: 1
+        },
+        {
             title: "创建实例",
             to: "/create_instance",
             type: 1
@@ -51,63 +56,48 @@ export function links() {
             type: 1
         },
         {
-            title: "获取分布式服务列表",
-            to: "/get_daemonList",
-            type: 1
-        },
-        {
-            title: "普通用户编辑实例",
-            to: "/lowEdit_instance",
-            type: 1
-        },
-        {
-            title: "普通用户更新指定实例配置",
-            to: "",
-            type: 1
-        },
-        {
-            title: "编辑实例（管理）",
-            to: "",
+            title: "编辑实例",
+            to: "/edit_instance",
             type: 1
         },
         {
             title: "查询实例配置文件列表",
-            to: "",
+            to: "/query_instance_configFile",
             type: 1
         },
         {
             title: "获取指定实例配置文件内容",
-            to: "",
+            to: "/get_instance_configFileContent",
             type: 1
         },
         {
             title: "更新指定实例配置文件内容",
-            to: "",
+            to: "/update_instance_configFileContent",
             type: 1
         },
         {
             title: "获取某实例详细信息（管理）",
-            to: "",
+            to: "/get_instance_info",
             type: 1
         },
         {
             title: "开启实例",
-            to: "",
+            to: "/start_instance",
             type: 1
         },
         {
             title: "关闭实例",
-            to: "",
+            to: "/stop_instance",
             type: 1
         },
         {
             title: "重启实例",
-            to: "",
+            to: "/restart_instance",
             type: 1
         },
         {
             title: "终止实例",
-            to: "",
+            to: "/kill_instance",
             type: 1
         },
         {
