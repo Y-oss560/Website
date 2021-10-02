@@ -11,10 +11,11 @@ import "./md.css"
 
 export default function Index() {
 
-    const navList = links()
-
-
+    // Markdown 文本变量
     const [markdownText, setMarkdownText] = useState("开发版本，请选择左侧菜单显示远程动态内容");
+
+    // 获取菜单项
+    const navList = links();
 
     // 选择 API 事件，自动远程加载
     async function onSelectApi(to) {
@@ -26,14 +27,14 @@ export default function Index() {
             url,
             success() {
                 const text = response.responseText;
+                // 更新 Markdown 文本变量
                 setMarkdownText(text);
             }
         });
 
     }
 
-
-
+    // HTML 模板
     return (
         <Container maxWidth="lg">
             <div style={{ marginTop: "24px" }}>
@@ -45,15 +46,16 @@ export default function Index() {
                                     if (element.type === 2) {
                                         return (
                                             <li>
-                                                <p>{element.title}</p>
+                                                <h3>{element.title}</h3>
+                                            </li>
+                                        )
+                                    } else {
+                                        return (
+                                            <li style={{ margin: "2px 0px", fontSize: "14px" }}>
+                                                <ALink style={{ cursor: "pointer" }} onClick={() => onSelectApi(element.to)}>{element.title}</ALink>
                                             </li>
                                         )
                                     }
-                                    return (
-                                        <li style={{ margin: "4px 0px", fontSize: "13px" }}>
-                                            <ALink style={{ cursor: "pointer" }} onClick={() => onSelectApi(element.to)}>{element.title}</ALink>
-                                        </li>
-                                    )
                                 })
                             }
                         </ul>
@@ -61,7 +63,6 @@ export default function Index() {
                     <Grid item xs={8}>
                         <ReactMarkdown children={markdownText} />
                     </Grid>
-
                 </Grid>
             </div>
         </Container>
