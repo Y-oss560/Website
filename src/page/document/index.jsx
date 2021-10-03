@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import ALink from '@material-ui/core/Link'
@@ -10,6 +10,7 @@ import "./md.css"
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
+import axios from "axios"
 
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -18,7 +19,8 @@ function Alert(props) {
 export default function Index() {
 
     // Markdown 文本变量
-    const [markdownText, setMarkdownText] = useState("开发版本，请选择左侧菜单显示远程动态内容");
+    const [markdownText, setMarkdownText] = useState("");
+
     // Other State
     const [openAlert, setOpenAlert] = React.useState({
         open: false,
@@ -26,6 +28,14 @@ export default function Index() {
     });
     // 获取菜单项
     const navList = links();
+
+    // 副作用函数
+    useEffect(() => {
+        if (markdownText === "") {
+            onSelectApi("/quick_start")
+        }
+    }, [markdownText])
+
 
     // 选择 API 事件，自动远程加载
     async function onSelectApi(to) {
@@ -42,15 +52,8 @@ export default function Index() {
         if (to === "/" || !to) {
             url = `/markdown/quick_start.md`;
         }
-        const response = $.ajax({
-            url,
-            success() {
-                const text = response.responseText;
-                // 更新 Markdown 文本变量
-                setMarkdownText(text);
-            }
-        });
-
+        const response = await axios.get(url)
+        setMarkdownText(response.data);
     }
 
     function closeAlert() {
@@ -59,6 +62,8 @@ export default function Index() {
             title: ""
         })
     }
+
+
 
     // HTML 模板
     return (
