@@ -10,7 +10,11 @@ import "./md.css"
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
+
 import axios from "axios"
+
 
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -26,6 +30,9 @@ export default function Index() {
         open: false,
         title: ""
     });
+    const [loading, setLoading] = useState(true);
+
+
     // 获取菜单项
     const navList = links();
 
@@ -52,7 +59,9 @@ export default function Index() {
         if (to === "/" || !to) {
             url = `/markdown/quick_start.md`;
         }
+        setLoading(true);
         const response = await axios.get(url)
+        setLoading(false);
         setMarkdownText(response.data);
     }
 
@@ -61,6 +70,22 @@ export default function Index() {
             open: false,
             title: ""
         })
+    }
+
+    function ReactMarkdownArea(props) {
+        if (loading) {
+            return (
+                <div style={{
+                    height: "400px", display: "flex",
+                    justifyContent: "space-around",
+                    alignItems: "center"
+                }}>
+                    <CircularProgress />
+                </div>
+            )
+        } else {
+            return <ReactMarkdown  {...props} />
+        }
     }
 
 
@@ -93,7 +118,7 @@ export default function Index() {
                             </ul>
                         </Grid>
                         <Grid item xs={8}>
-                            <ReactMarkdown children={markdownText} />
+                            <ReactMarkdownArea children={markdownText} />
                         </Grid>
                     </Grid>
                 </div>
