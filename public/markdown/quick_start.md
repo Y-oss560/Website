@@ -7,47 +7,20 @@ MCSManager 面板（简称：MCSM 面板）是一款全中文，轻量级，开�
 
 ### 安装和使用
 
-暂无
+请加QQ群287215485
 
+
+### Linux 使用
+
+
+1. 先安装 Node 14+ 运行时环境
+2. 分别上传 `Daemon` 和 `Web` 两个目录（可以先删除里面的 `node_modules` 目录）
+3. 分别 `cd` 进入两个目录安装依赖库 `npm install`
+4. 分别启动两个项目 `node app.js`
 
 
 ### 运行环境
 
-Linux 下运行需要 Node 14 +
+Linux 下运行需要 Node 14 +，Windows 整合版内部自带，无需手动安装。
 
-Windows 一般情况下自带
-
-
-
-下载前往：https://nodejs.org/zh-cn/
-
-
-
-```JS
-const a = 1;
-const b = 2;
- function r(n) {
-            if (t[n])
-                return t[n].exports;
-            var o = t[n] = {
-                i: n,
-                l: !1,
-                exports: {}
-            };
-            return e[n].call(o.exports, o, o.exports, r),
-            o.l = !0,
-            o.exports
-        }
-```
-
- # 支持的系统
-
-- Linux 系统
-- WIndows 64
-- Windows 32
-
-
-
-## 二号标题
-
-> 你好世界，世界你好
+Node 环境下载前往：[https://nodejs.org/zh-cn/](https://nodejs.org/zh-cn/)
