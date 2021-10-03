@@ -87,7 +87,7 @@ export default class Main extends React.Component {
                                             <p style={{ color: "gray" }}>
                                                 <small>
                                                     运行时环境 Node 14+<br />
-                                                    遵循 GPL 开源协议，商业使用需授权
+                                                    遵循 GPL 开源协议
                                                 </small>
                                             </p>
                                         </div>
