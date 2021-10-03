@@ -9,7 +9,7 @@
 请求方式
 
 ```
-PUT
+DELETE
 Content-Type: x-www-form-urlencoded; charset=utf-8
 ```
 

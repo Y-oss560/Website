@@ -19,11 +19,11 @@ Content-Type: application/json; charset=utf-8
 {
     "targets":[
         [
-            "eula.txt",     //被复制的文件名
-            "test/eula.txt"   //复制到哪，复制后的文件名
+            "eula.txt",         //被复制的文件名
+            "test/eula.txt"     //复制到哪，复制后的文件名
         ],
         [
-            "spigot.yml",   //同上，支持同时复制多个文件
+            "spigot.yml",       //同上，支持同时复制多个文件
             "test/b2.txt"
         ]
     ]
