@@ -52,11 +52,6 @@ export function links() {
             type: 1
         },
         {
-            title: "编辑实例",
-            to: "/edit_instance",
-            type: 1
-        },
-        {
             title: "查询实例配置文件列表",
             to: "/query_instance_configFile",
             type: 1
