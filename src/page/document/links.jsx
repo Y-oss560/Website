@@ -31,7 +31,22 @@ export function links() {
             type: 1
         },
         {
-            title: "数据分析功能",
+            title: "面板周边功能",
+            to: "",
+            type: 2
+        },
+        {
+            title: "获取面板设置",
+            to: "/get_settings",
+            type: 1
+        },
+        {
+            title: "更新面板设置",
+            to: "/update_settings",
+            type: 1
+        },
+        {
+            title: "数据分析",
             to: "",
             type: 2
         },
