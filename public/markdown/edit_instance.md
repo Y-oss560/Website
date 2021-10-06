@@ -13,7 +13,7 @@ POST
 Content-Type: application/json; charset=utf-8
 ```
 
-请求体参数
+请求参数
 
 ```
 {

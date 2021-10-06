@@ -10,7 +10,7 @@
 
 ```
 POST 
-Content-Type: x-www-form-urlencoded
+Content-Type: application/json; charset=utf-8
 ```
 
 请求参数

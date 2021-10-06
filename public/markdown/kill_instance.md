@@ -10,7 +10,7 @@
 
 ```
 GET
-Content-Type: application/json; charset=utf-8
+Content-Type: x-www-form-urlencoded; charset=utf-8
 ```
 
 响应

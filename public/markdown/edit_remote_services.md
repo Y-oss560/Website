@@ -10,7 +10,7 @@
 
 ```
 DELETE
-Content-Type: x-www-form-urlencoded; charset=utf-8
+Content-Type: application/json; charset=utf-8
 ```
 
 请求参数
