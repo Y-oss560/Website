@@ -17,7 +17,17 @@ Content-Type: application/json; charset=utf-8
 ```json
 {
     "status": 200,
-    "data": true,
-    "time": 1633486903384
+    "data": [
+        {
+            "instanceUuid": "edaa5c64b9f1402bb60970e0785d6c34",
+            "name": "测试任务",
+            "count": 1,
+            "time": "86400",
+            "action": "command",
+            "payload": "ping www.baidu.com",
+            "type": 1
+        }
+    ],
+    "time": 1633504774265
 }
 ```
