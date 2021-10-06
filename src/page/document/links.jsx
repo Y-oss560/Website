@@ -35,7 +35,6 @@ export function links() {
             to: "",
             type: 2
         },
-
         {
             title: "创建实例",
             to: "/create_instance",
@@ -97,7 +96,7 @@ export function links() {
             type: 2
         },
         {
-            title: "仅获取远程服务列表",
+            title: "获取远程服务列表和实例UID",
             to: "/get_remote_services",
             type: 1
         },
@@ -138,7 +137,7 @@ export function links() {
         },
         {
             title: "创建计划任务",
-            to: "",
+            to: "/create_schedule",
             type: 1
         },
         {
@@ -148,12 +147,12 @@ export function links() {
         },
         {
             title: "删除计划任务",
-            to: "",
+            to: "/del_schedule",
             type: 1
         },
         {
             title: "获取计划任务列表",
-            to: "",
+            to: "/get_schedule_list",
             type: 1
         },
         {
