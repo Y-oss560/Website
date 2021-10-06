@@ -31,6 +31,20 @@ export function links() {
             type: 1
         },
         {
+            title: "数据分析功能",
+            to: "",
+            type: 2
+        },
+        {
+            title: "数据监控",
+            to: "/overview",
+            type: 1
+        },{
+            title: "查看各个守护进程简报",
+            to: "/get_remote_services_info",
+            type: 1
+        },
+        {
             title: "实例管理",
             to: "",
             type: 2
