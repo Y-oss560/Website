@@ -63,6 +63,7 @@ export default function Index() {
         const response = await axios.get(url)
         setLoading(false);
         setMarkdownText(response.data);
+        window.scrollTo(0, 0);
     }
 
     function closeAlert() {
