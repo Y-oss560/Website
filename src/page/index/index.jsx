@@ -24,10 +24,20 @@ import ExploreIcon from '@material-ui/icons/Explore';
 import "./index.css"
 
 export default class Index extends React.Component {
+
+  constructor() {
+    super();
+    this.myRef = React.createRef();
+  }
+
+  componentDidMount() {
+    console.log("AA::", this.myRef)
+  }
+
   render() {
     return (
       <div >
-        <div >
+        <div ref={this.myRef}>
           <Main></Main>
         </div >
         <div className="page">
