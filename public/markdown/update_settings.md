@@ -17,7 +17,7 @@ Content-Type: application/json; charset=utf-8
 ```json
 {
     "maxDonwload": 100,
-    "maxCompress":2,         // 最大 压缩/解压 
+    "maxCompress":2,         // 最大 压缩/解压 量
     "gzip":true             // 是否启用gzip压缩
 }
 ```
