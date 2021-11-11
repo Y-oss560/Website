@@ -5,9 +5,15 @@ import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import { Hidden, Container } from "@material-ui/core";
 
+import style from "./css/header.module.css";
+
 export default function Header() {
   return (
-    <AppBar position="static" style={{ backgroundColor: "rgb(0 0 0 / 100%)" }}>
+    <AppBar
+      position="static"
+      style={{ backgroundColor: "#000000ad", position: "absolute" }}
+      className={style.header}
+    >
       <Toolbar>
         <Container maxWidth="lg">
           <Grid
@@ -21,7 +27,10 @@ export default function Header() {
               <img src="/static/logo.png" alt="" />
             </Grid>
             <Grid item xs={8}>
-              <div className="button-group-small">
+              <div
+                className="button-group-small"
+                style={{ textAlign: "right" }}
+              >
                 <Hidden mdDown>
                   <Button style={{ color: "white" }}> 文档</Button>
 
