@@ -11,6 +11,16 @@ export default class MyDocument extends Document {
   }
 
   render() {
+    const baiduScript = `
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?613715e86a534a1f660d85cd0a42c684";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  `;
+
     return (
       <html>
         <Head>
@@ -29,13 +39,12 @@ export default class MyDocument extends Document {
             name="description"
             content="MCSManager 管理面板（MCSM面板）是适用于 Minecraft 游戏服务器的轻量级管理面板"
           />
-          <script src="http://api.mcsmanager.com/mcsm_sponsor.js"></script>
           <link href="/static/common.css" rel="stylesheet"></link>
+          <script dangerouslySetInnerHTML={{ __html: baiduScript }}></script>
+          <script src="http://api.mcsmanager.com/mcsm_sponsor.js"></script>
         </Head>
-        <body className="custom_class">
-          <div id="app">
-            <Main />
-          </div>
+        <body>
+          <Main />
           <NextScript />
         </body>
       </html>
