@@ -3,7 +3,7 @@ a {
 }
 @font-face {
   font-family: hmos;
-  src: url(assets/font.ttf);
+  src: url(/static/font.ttf);
 }
 
 body {
@@ -14,10 +14,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body,
-html {
-  /* height: 100%; */
-}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -84,4 +80,21 @@ code {
     text-align: center;
     padding: 48px 0px;
   }
+}
+
+.page-content {
+  padding: 12px 0px;
+}
+
+.page-main {
+  padding-bottom: 20px;
+  background-color: rgb(29, 39, 43);
+  color: white;
+  min-height: 660px;
+  background-image: url("/static/line.png");
+}
+
+a {
+  color: #c2c2c2;
+  text-decoration: none;
 }
