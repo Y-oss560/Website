@@ -1,16 +1,13 @@
-// _document is only rendered on the server side and not on the client side
-// Event handlers like onClick can't be added to this file
-
-// ./pages/_document.js
 import Document, { Head, Main, NextScript } from "next/document";
 
-export default class MyDocument extends Document {
+export default class PageDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
 
   render() {
+    // 百度统计脚本
     const baiduScript = `
     var _hmt = _hmt || [];
     (function () {
@@ -37,7 +34,7 @@ export default class MyDocument extends Document {
           />
           <meta
             name="description"
-            content="MCSManager 管理面板（MCSM面板）是适用于 Minecraft 游戏服务器的轻量级管理面板"
+            content="MCSManager 管理面板（MCSM 面板）是适用于 Minecraft 游戏服务器的轻量级管理面板"
           />
           <link href="/static/common.css" rel="stylesheet"></link>
           <script dangerouslySetInnerHTML={{ __html: baiduScript }}></script>
