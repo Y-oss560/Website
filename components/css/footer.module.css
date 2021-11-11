@@ -1,0 +1,17 @@
+.footer {
+  background-color: rgb(28, 39, 43);
+  color: #c2c2c2;
+  font-size: 13px;
+  padding: 60px 0px;
+}
+
+.footer a {
+  display: inline-block;
+  margin: 0px 4px;
+  text-decoration: underline;
+  transition: all 0.4s;
+}
+
+.footer a:hover {
+  opacity: 0.6;
+}
