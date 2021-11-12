@@ -1,0 +1,18 @@
+.index {
+  height: 400px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#itemimage1 {
+}
+
+.ItemCrad {
+  position: absolute;
+  height: 300px;
+  width: 250px;
+  background-color: rgb(141, 132, 132);
+  border-radius: 8px;
+  border: 2px soild black;
+}
