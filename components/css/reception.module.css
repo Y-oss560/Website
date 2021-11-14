@@ -17,8 +17,12 @@
   text-align: center;
 }
 
-.TextButton {
+.TextButtonPanel {
   margin-top: 40px;
+}
+
+.TextButtonQuickStart:hover {
+  background-color: #155807 !important;
 }
 
 .Highlight {
