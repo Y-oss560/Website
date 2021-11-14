@@ -1,6 +1,7 @@
 a {
   text-decoration: none;
 }
+
 @font-face {
   font-family: hmos;
   src: url(/static/font.ttf);
@@ -8,26 +9,27 @@ a {
 
 body {
   margin: 0;
-  font-family: "hmos", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "hmos", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .MuiButton-root {
   text-transform: capitalize !important;
 }
+
 .page {
   padding: 80px 0;
 }
+
 .page-bg-white {
   background-color: white;
 }
+
 .page-bg-gray {
   background-color: rgb(248, 248, 251);
 }
@@ -48,24 +50,29 @@ code {
 .text-gray {
   color: #666666;
 }
+
 .text-weight {
   font-weight: 600;
 }
 
 /* 响应式按钮组设计 */
+
 .button-group {
   margin: -8px;
 }
-.button-group > * {
+
+.button-group>* {
   margin: 8px !important;
 }
 
 .button-group-small {
   margin: -4px;
 }
-.button-group-small > * {
+
+.button-group-small>* {
   margin: 4px !important;
 }
+
 .sub-title {
   font-size: 12px;
   color: #666666;
@@ -97,4 +104,18 @@ code {
 a {
   color: #c2c2c2;
   text-decoration: none;
+}
+
+code {
+  display: block;
+  background-color: #333333;
+  color: #eee;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.sub-title {
+  font-size: 12px;
+  color: gray;
 }

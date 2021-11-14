@@ -1,7 +1,7 @@
 /*
  * @Author: Copyright 2021 Suwings
  * @Date: 2021-09-10 15:00:32
- * @LastEditTime: 2021-09-10 15:13:50
+ * @LastEditTime: 2021-11-14 11:31:07
  * @Description:
  */
 import React from "react";
@@ -13,8 +13,12 @@ import { Hidden, Button } from "@material-ui/core";
 import LocalAtmIcon from "@material-ui/icons/LocalAtm";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import ExploreIcon from "@material-ui/icons/Explore";
-
+import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
+import BallotIcon from '@material-ui/icons/Ballot';
 import Sponsor from "./Sponsor";
+import Link from '@material-ui/core/Link';
+
+import style from "./css/appinfo.module.css";
 
 export default function AppInfo() {
   return (
@@ -24,7 +28,7 @@ export default function AppInfo() {
           <Grid container spacing={2}>
             <Hidden mdDown>
               <Grid item md={4}>
-                <BubbleChartIcon style={{ fontSize: 220 }}></BubbleChartIcon>
+                <BallotIcon style={{ fontSize: 220 }}></BallotIcon>
               </Grid>
             </Hidden>
             <Grid item md={8}>
@@ -37,7 +41,7 @@ export default function AppInfo() {
                   <br /> 在 Minecraft Java
                   版中已有一定的流行程度，它可以帮助你集中管理多个服务器，又或者分配账号供其他人使用而不必过于担心安全问题，对于商业活动也有一定的基础功能。
                 </p>
-                <div className="button-group">
+                {/* <div className="button-group">
                   <a
                     className="button-alink"
                     href="https://github.com/Suwings/MCSManager/issues/467"
@@ -48,12 +52,64 @@ export default function AppInfo() {
                       了解更多
                     </Button>
                   </a>
+                </div> */}
+              </div>
+            </Grid>
+          </Grid>
+        </Container>
+
+        <Container maxWidth="lg">
+          <h1 style={{ marginTop: "80px", display: "block" }}>立刻下载！(暂不可用)</h1>
+          <Grid container spacing={2}>
+            <Grid item md={6}>
+              <div className="page-content">
+
+                <div className={style.DownloadBlock}>
+                  <p>
+                    Windows 整合版
+                    <br />
+                    <span className="sub-title">支持 Windows 7 以上系列的 x64 系统，开箱即用程序，不污染任何注册表和关联任何程序</span>
+                  </p>
+                  <a
+                    className="button-alink"
+                    href="https://github.com/Suwings/MCSManager/issues/467"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="contained" color="primary" size="large">
+                      下载 Zip 文件
+                    </Button>
+                  </a>
+
+                </div>
+              </div>
+            </Grid>
+            <Grid item md={6}>
+              <div className="page-content">
+                <div className={style.DownloadBlock}>
+                  <p>
+                    Linux 安装脚本
+                    <br />
+                    <span className="sub-title">安装成功后，使用 systemctl start mcsm 和 systemctl start mcsd 命令即可启动面板</span>
+                  </p>
+                  <div>
+                    <code>
+                      wget -qO- https://gitee.com/Suwingser/MCSManager-installer/raw/master/install.sh | bash
+                    </code>
+                    <span className="sub-title">
+                      <Link href="#" >
+                        安装失败？
+                      </Link>
+                    </span>
+                  </div>
                 </div>
               </div>
             </Grid>
           </Grid>
         </Container>
       </div>
+
+
 
       <div className="page page-bg-gray">
         <Container maxWidth="lg">
