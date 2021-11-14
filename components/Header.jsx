@@ -8,10 +8,13 @@ import { Hidden, Container } from "@material-ui/core";
 import style from "./css/header.module.css";
 
 export default function Header() {
+
+
+
   return (
     <AppBar
       position="static"
-      style={{ backgroundColor: "#000000ad", position: "absolute" }}
+      style={{ backgroundColor: "#0000006e", position: "absolute" }}
       className={style.header}
     >
       <Toolbar>

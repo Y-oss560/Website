@@ -1,18 +1,26 @@
-.index {
-  height: 400px;
+.Index {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  background-image: url(/static/line.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#itemimage1 {
+.TextHello, .TextHello h1 {
+  margin: 0px 20px;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  color: white;
+  text-align: center;
 }
 
-.ItemCrad {
-  position: absolute;
-  height: 300px;
-  width: 250px;
-  background-color: rgb(141, 132, 132);
-  border-radius: 8px;
-  border: 2px soild black;
+.TextButton {
+  margin-top: 40px;
+}
+
+.Highlight {
+  color: #ffc107!important;
 }
