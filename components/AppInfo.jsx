@@ -1,7 +1,7 @@
 /*
  * @Author: Copyright 2021 Suwings
  * @Date: 2021-09-10 15:00:32
- * @LastEditTime: 2021-11-14 11:31:07
+ * @LastEditTime: 2021-11-14 11:37:23
  * @Description:
  */
 import React from "react";
@@ -38,9 +38,8 @@ export default function AppInfo() {
                   MCSManager 面板（简称：MCSM
                   面板）是一款全中文，轻量级，开箱即用，多实例和支持 Docker 的
                   Minecraft 服务端管理面板。
-                  <br /> 在 Minecraft Java
-                  版中已有一定的流行程度，它可以帮助你集中管理多个服务器，又或者分配账号供其他人使用而不必过于担心安全问题，对于商业活动也有一定的基础功能。
                 </p>
+                <p>此控制面板在 Minecraft 和其他游戏社区内中已有一定的流行程度，它可以帮助你集中管理多个服务器，又或者分配账号供其他人使用而不必过于担心安全问题，对于商业活动也有一定的基础功能。</p>
                 {/* <div className="button-group">
                   <a
                     className="button-alink"

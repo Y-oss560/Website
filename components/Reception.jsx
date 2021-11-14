@@ -28,9 +28,10 @@ export default function Reception() {
               <span className={style.Highlight}> Minecraft </span>
               <span>和其他游戏的服务端管理面板</span>
             </h1>
+            <p className="sub-title" style={{ fontSize: "14px" }}>现在，您可免费获取它并开始使用！</p>
             <div className={style.TextButtonPanel}>
               <Button variant="contained" color="primary" size="large" className={`${style.TextButtonQuickStart} ${style.TextButton}`} style={{ margin: "10px", backgroundColor: "#1a7808" }}>
-                立刻使用
+                开始使用
               </Button>
               <Button variant="contained" color="primary" size="large" className={`${style.TextButton}`} style={{ margin: "10px" }}>
                 了解更多
