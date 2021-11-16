@@ -40,16 +40,16 @@ export default function News() {
       </div>
     );
   } else {
-    const displayItems = newsItem.slice(0, 5);
+    const displayItems = newsItem.slice(0, 8);
     newsElement = displayItems.map((v, index) => {
-      if (index > 6) return null;
       return (
         <>
-          <div style={{ marginBottom: "8px" }}>
+          <div style={{ marginBottom: "12px" }}>
             <div
               style={{
                 display: "inline-block",
                 width: "10%",
+                verticalAlign: "top",
               }}
             >
               {v.time}
