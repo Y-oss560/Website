@@ -2,7 +2,6 @@ import React from "react";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Main from "../components/Main";
 import Reception from "../components/Reception";
 import AppInfo from "../components/AppInfo";
 export default function index() {

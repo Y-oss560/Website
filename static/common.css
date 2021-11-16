@@ -9,13 +9,15 @@ a {
 
 body {
   margin: 0;
-  font-family: "hmos", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "hmos", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 .MuiButton-root {
@@ -61,7 +63,7 @@ code {
   margin: -8px;
 }
 
-.button-group>* {
+.button-group > * {
   margin: 8px !important;
 }
 
@@ -69,7 +71,7 @@ code {
   margin: -4px;
 }
 
-.button-group-small>* {
+.button-group-small > * {
   margin: 4px !important;
 }
 
@@ -91,6 +93,11 @@ code {
 
 .page-content {
   padding: 12px 0px;
+}
+
+.page-content-hr {
+  margin-top: 80px;
+  display: block;
 }
 
 .page-main {

@@ -13,12 +13,14 @@ import { Hidden, Button } from "@material-ui/core";
 import LocalAtmIcon from "@material-ui/icons/LocalAtm";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import ExploreIcon from "@material-ui/icons/Explore";
-import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
-import BallotIcon from '@material-ui/icons/Ballot';
+import CloudDownloadIcon from "@material-ui/icons/CloudDownload";
+import BallotIcon from "@material-ui/icons/Ballot";
 import Sponsor from "./Sponsor";
-import Link from '@material-ui/core/Link';
+import Link from "@material-ui/core/Link";
 
 import style from "./css/appinfo.module.css";
+
+import News from "./News";
 
 export default function AppInfo() {
   return (
@@ -39,7 +41,10 @@ export default function AppInfo() {
                   面板）是一款全中文，轻量级，开箱即用，多实例和支持 Docker 的
                   Minecraft 服务端管理面板。
                 </p>
-                <p>此控制面板在 Minecraft 和其他游戏社区内中已有一定的流行程度，它可以帮助你集中管理多个服务器，又或者分配账号供其他人使用而不必过于担心安全问题，对于商业活动也有一定的基础功能。</p>
+                <p>
+                  此控制面板在 Minecraft
+                  和其他游戏社区内中已有一定的流行程度，它可以帮助你集中管理多个服务器，又或者分配账号供其他人使用而不必过于担心安全问题，对于商业活动也有一定的基础功能。
+                </p>
                 {/* <div className="button-group">
                   <a
                     className="button-alink"
@@ -58,16 +63,18 @@ export default function AppInfo() {
         </Container>
 
         <Container maxWidth="lg">
-          <h1 style={{ marginTop: "80px", display: "block" }}>立刻下载！(暂不可用)</h1>
+          <h1 className="page-content-hr">立刻下载！(暂不可用)</h1>
           <Grid container spacing={2}>
             <Grid item md={6}>
               <div className="page-content">
-
                 <div className={style.DownloadBlock}>
                   <p>
                     Windows 整合版
                     <br />
-                    <span className="sub-title">支持 Windows 7 以上系列的 x64 系统，开箱即用程序，不污染任何注册表和关联任何程序</span>
+                    <span className="sub-title">
+                      支持 Windows 7 以上系列的 x64
+                      系统，开箱即用程序，不污染任何注册表和关联任何程序
+                    </span>
                   </p>
                   <a
                     className="button-alink"
@@ -79,7 +86,6 @@ export default function AppInfo() {
                       下载 Zip 文件
                     </Button>
                   </a>
-
                 </div>
               </div>
             </Grid>
@@ -89,16 +95,19 @@ export default function AppInfo() {
                   <p>
                     Linux 安装脚本
                     <br />
-                    <span className="sub-title">安装成功后，使用 systemctl start mcsm 和 systemctl start mcsd 命令即可启动面板</span>
+                    <span className="sub-title">
+                      安装成功后，使用 systemctl start mcsm 和 systemctl start
+                      mcsd 命令即可启动面板
+                    </span>
                   </p>
                   <div>
                     <code>
-                      wget -qO- https://gitee.com/Suwingser/MCSManager-installer/raw/master/install.sh | bash
+                      wget -qO-
+                      https://gitee.com/Suwingser/MCSManager-installer/raw/master/install.sh
+                      | bash
                     </code>
                     <span className="sub-title">
-                      <Link href="#" >
-                        安装失败？
-                      </Link>
+                      <Link href="#">安装失败？</Link>
                     </span>
                   </div>
                 </div>
@@ -106,9 +115,14 @@ export default function AppInfo() {
             </Grid>
           </Grid>
         </Container>
+
+        <Container maxWidth="lg">
+          <h1 className="page-content-hr">最新动态</h1>
+          <div className="page-content">
+            <News></News>
+          </div>
+        </Container>
       </div>
-
-
 
       <div className="page page-bg-gray">
         <Container maxWidth="lg">
